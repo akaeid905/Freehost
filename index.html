@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>NF world </title>
+    <title>Nf world </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root { 
@@ -449,13 +449,13 @@
         <div class="header-top">
             <div class="logo-container">
                 <button id="backBtn" class="back-arrow-btn hidden" onclick="goBack()"><i class="fa fa-arrow-left"></i></button>
-                <img id="appLogoImg" src="" alt="Logo" class="hidden">
-                <div class="logo" id="appTitle">YOUR Shop Name</div>
+                <img id="appLogoImg" src="" alt="লোগো" class="hidden">
+                <div class="logo" id="appTitle">আপনার শপের নাম</div>
             </div>
         </div>
         <div class="search-bar">
             <i class="fa fa-search" style="color:var(--text-light); margin-right:8px; font-size:15px;"></i>
-            <input type="text" id="searchInput" placeholder="Search products...">
+            <input type="text" id="searchInput" placeholder="পণ্য খুঁজুন...">
             <div class="search-suggestions hidden" id="searchSuggestions"></div>
         </div>
     </header>
@@ -467,39 +467,39 @@
                 <div class="carousel-inner" id="bannerContainer"></div>
             </div>
             
-            <div class="section-title">Flash Sale <span style="color:var(--accent); font-size: 13px; font-weight:800; text-shadow: var(--neon-shadow);">View All</span></div>
+            <div class="section-title">ফ্ল্যাশ সেল <span style="color:var(--accent); font-size: 13px; font-weight:800; text-shadow: var(--neon-shadow);">সব দেখুন</span></div>
             <div class="h-scroll" id="flashSaleContainer"><div class="skeleton" style="width:175px; height:240px; flex-shrink:0;"></div></div>
 
-            <div class="section-title">Categories</div>
+            <div class="section-title">ক্যাটাগরি</div>
             <div class="h-scroll" id="categoryContainer"></div>
 
-            <div class="section-title">Trending Products</div>
+            <div class="section-title">জনপ্রিয় পণ্যসমূহ</div>
             <div class="h-scroll" id="trendingContainer"></div>
 
-            <div class="section-title">Recently Viewed</div>
+            <div class="section-title">সাম্প্রতিক দেখা পণ্য</div>
             <div class="h-scroll" id="recentContainer"></div>
 
-            <div class="section-title">Just For You</div>
+            <div class="section-title">শুধু আপনার জন্য</div>
             <div class="grid-2" id="recommendedContainer"></div>
         </div>
 
         <!-- Categories View -->
         <div id="view-categories" class="view p-15">
-            <h2 class="mb-20" style="font-weight: 800; text-shadow: var(--purple-glow);">All Categories</h2>
+            <h2 class="mb-20" style="font-weight: 800; text-shadow: var(--purple-glow);">সব ক্যাটাগরি</h2>
             <div class="grid-2 mt-10" id="allCategoriesGrid"></div>
         </div>
 
         <!-- Cart View -->
         <div id="view-cart" class="view p-15">
-            <h2 class="mb-20" style="font-weight: 800; text-shadow: var(--purple-glow);">My Cart</h2>
+            <h2 class="mb-20" style="font-weight: 800; text-shadow: var(--purple-glow);">আমার কার্ট</h2>
             <div id="cartItems" class="mt-10"></div>
             <div id="savedItems" class="mt-10 hidden">
-                <h3 class="mb-10" style="font-weight: 700;">Saved for Later</h3>
+                <h3 class="mb-10" style="font-weight: 700;">পরবর্তীতে কেনার জন্য সংরক্ষিত</h3>
                 <div id="savedItemsContainer"></div>
             </div>
             <div class="card mt-10">
-                <div class="flex justify-between mb-20"><span>Total:</span> <strong id="cartTotal" style="color: var(--accent); font-size: 20px; font-weight: 800; text-shadow: var(--neon-shadow);">৳ 0</strong></div>
-                <button class="btn-primary" onclick="goToCheckout()"><i class="fa fa-arrow-right"></i> Checkout</button>
+                <div class="flex justify-between mb-20"><span>মোট:</span> <strong id="cartTotal" style="color: var(--accent); font-size: 20px; font-weight: 800; text-shadow: var(--neon-shadow);">৳ ০</strong></div>
+                <button class="btn-primary" onclick="goToCheckout()"><i class="fa fa-arrow-right"></i> চেকআউট</button>
             </div>
         </div>
 
@@ -508,17 +508,17 @@
             <div class="card flex items-center mb-20" style="border: 1px solid var(--border); background: var(--white); box-shadow: var(--purple-glow);">
                 <i class="fa fa-user-circle fa-3x" style="color:var(--accent); margin-right:15px; text-shadow: var(--neon-shadow);"></i>
                 <div>
-                    <h2 id="accName" style="font-weight: 800;">Guest</h2>
-                    <p id="accEmail" style="color: var(--text-light); font-size:13px;">No login required</p>
+                    <h2 id="accName" style="font-weight: 800;">অতিথি</h2>
+                    <p id="accEmail" style="color: var(--text-light); font-size:13px;">লগইন প্রয়োজন নেই</p>
                 </div>
             </div>
             <div class="card flex-col gap-10">
-                <div class="flex justify-between p-15 border-bottom" style="cursor: pointer;" onclick="nav('orders')"><span><i class="fa fa-box" style="width: 24px; color: var(--accent); text-shadow: var(--neon-shadow);"></i> My Orders</span> <i class="fa fa-angle-right" style="color: var(--text-light);"></i></div>
-                <div class="flex justify-between p-15 border-bottom" style="cursor: pointer;" onclick="nav('wishlist')"><span><i class="fa fa-heart" style="width: 24px; color: var(--accent); text-shadow: var(--neon-shadow);"></i> My Wishlist</span> <i class="fa fa-angle-right" style="color: var(--text-light);"></i></div>
-                <div class="flex justify-between p-15 border-bottom" style="cursor: pointer;" onclick="alert('Followed stores feature coming soon!')"><span><i class="fa fa-store" style="width: 24px; color: var(--accent); text-shadow: var(--neon-shadow);"></i> Followed Stores</span> <i class="fa fa-angle-right" style="color: var(--text-light);"></i></div>
-                <div class="flex justify-between p-15 border-bottom" style="cursor: pointer;" onclick="chatWithUs()"><span><i class="fa fa-comments" style="width: 24px; color: var(--accent); text-shadow: var(--neon-shadow);"></i> Chat With Us</span> <i class="fa fa-angle-right" style="color: var(--text-light);"></i></div>
-                <div class="flex justify-between p-15 border-bottom" style="cursor: pointer;" onclick="nav('help')"><span><i class="fa fa-headset" style="width: 24px; color: var(--accent); text-shadow: var(--neon-shadow);"></i> Help & Policies</span> <i class="fa fa-angle-right" style="color: var(--text-light);"></i></div>
-                <div class="flex justify-between p-15 border-bottom" style="cursor: pointer;" onclick="nav('feedback')"><span><i class="fa fa-star" style="width: 24px; color: var(--accent); text-shadow: var(--neon-shadow);"></i> Feedback</span> <i class="fa fa-angle-right" style="color: var(--text-light);"></i></div>
+                <div class="flex justify-between p-15 border-bottom" style="cursor: pointer;" onclick="nav('orders')"><span><i class="fa fa-box" style="width: 24px; color: var(--accent); text-shadow: var(--neon-shadow);"></i> আমার অর্ডার</span> <i class="fa fa-angle-right" style="color: var(--text-light);"></i></div>
+                <div class="flex justify-between p-15 border-bottom" style="cursor: pointer;" onclick="nav('wishlist')"><span><i class="fa fa-heart" style="width: 24px; color: var(--accent); text-shadow: var(--neon-shadow);"></i> আমার উইশলিস্ট</span> <i class="fa fa-angle-right" style="color: var(--text-light);"></i></div>
+                <div class="flex justify-between p-15 border-bottom" style="cursor: pointer;" onclick="alert('অনুসরণ করা স্টোর ফিচারটি শীঘ্রই আসছে!')"><span><i class="fa fa-store" style="width: 24px; color: var(--accent); text-shadow: var(--neon-shadow);"></i> অনুসরণ করা স্টোর</span> <i class="fa fa-angle-right" style="color: var(--text-light);"></i></div>
+                <div class="flex justify-between p-15 border-bottom" style="cursor: pointer;" onclick="chatWithUs()"><span><i class="fa fa-comments" style="width: 24px; color: var(--accent); text-shadow: var(--neon-shadow);"></i> আমাদের সাথে চ্যাট করুন</span> <i class="fa fa-angle-right" style="color: var(--text-light);"></i></div>
+                <div class="flex justify-between p-15 border-bottom" style="cursor: pointer;" onclick="nav('help')"><span><i class="fa fa-headset" style="width: 24px; color: var(--accent); text-shadow: var(--neon-shadow);"></i> সহায়তা ও নীতিমালা</span> <i class="fa fa-angle-right" style="color: var(--text-light);"></i></div>
+                <div class="flex justify-between p-15 border-bottom" style="cursor: pointer;" onclick="nav('feedback')"><span><i class="fa fa-star" style="width: 24px; color: var(--accent); text-shadow: var(--neon-shadow);"></i> মতামত</span> <i class="fa fa-angle-right" style="color: var(--text-light);"></i></div>
             </div>
         </div>
 
@@ -533,32 +533,32 @@
                 <div class="p-meta mb-10" style="border-bottom: 1px solid var(--border); padding-bottom: 12px;"><span id="prodRating">⭐⭐⭐⭐⭐</span> <span id="prodSold" style="color: var(--text-light);"></span></div>
                 
                 <div id="sizeSection" class="hidden mb-15">
-                    <strong style="font-size: 14px; margin-bottom: 8px; display: block;">Select Size:</strong>
+                    <strong style="font-size: 14px; margin-bottom: 8px; display: block;">সাইজ নির্বাচন করুন:</strong>
                     <div id="prodSizes" class="flex mt-10"></div>
                 </div>
 
                 <!-- Color Selection -->
                 <div id="colorSection" class="hidden mb-20">
-                    <strong style="font-size: 14px; margin-bottom: 8px; display: block;">Select Color:</strong>
+                    <strong style="font-size: 14px; margin-bottom: 8px; display: block;">কালার নির্বাচন করুন:</strong>
                     <div id="prodColors" class="flex mt-10"></div>
                 </div>
                 
                 <div class="mb-10" style="font-size: 14px; font-weight: 600; color: var(--text-light);">
-                    <i class="fa fa-truck" style="color: var(--accent); margin-right: 8px; width: 18px; text-shadow: var(--neon-shadow);"></i> Estimated Delivery: <span id="prodEta" style="color: var(--text); font-weight: 700;"></span>
+                    <i class="fa fa-truck" style="color: var(--accent); margin-right: 8px; width: 18px; text-shadow: var(--neon-shadow);"></i> আনুমানিক ডেলিভারি সময়: <span id="prodEta" style="color: var(--text); font-weight: 700;"></span>
                 </div>
                 <div class="mb-20" style="font-size: 14px; font-weight: 600; color: var(--text-light);">
-                    <i class="fa fa-box-open" style="color: var(--accent); margin-right: 8px; width: 18px; text-shadow: var(--neon-shadow);"></i> Stock: <span id="prodStock" style="color: var(--text); font-weight: 700;"></span>
+                    <i class="fa fa-box-open" style="color: var(--accent); margin-right: 8px; width: 18px; text-shadow: var(--neon-shadow);"></i> স্টক: <span id="prodStock" style="color: var(--text); font-weight: 700;"></span>
                 </div>
 
                 <!-- NEW: Dynamic Premium Glass Buy Bar placed ABOVE description -->
                 <div class="static-buy-bar">
                     <div class="flex-col justify-center">
-                        <span style="font-size: 11px; color: var(--text-light); text-transform: uppercase; font-weight: 800; letter-spacing: 0.5px;">Price</span>
-                        <strong class="buy-bar-price" style="font-size: 22px; color: var(--accent); font-weight: 850; text-shadow: var(--neon-shadow);">৳0</strong>
+                        <span style="font-size: 11px; color: var(--text-light); text-transform: uppercase; font-weight: 800; letter-spacing: 0.5px;">মূল্য</span>
+                        <strong class="buy-bar-price" style="font-size: 22px; color: var(--accent); font-weight: 850; text-shadow: var(--neon-shadow);">৳০</strong>
                     </div>
                     <div class="flex gap-10 items-center" style="margin-left: auto;">
-                        <button class="btn-secondary-green" onclick="addToCart(currentProduct)" title="Add to Cart"><i class="fa fa-shopping-cart"></i></button>
-                        <button class="btn-primary" style="width: auto; padding: 14px 32px; border-radius: 30px; background: linear-gradient(135deg, var(--accent-pink) 0%, var(--primary) 100%); box-shadow: var(--pink-glow); border: none;" onclick="buyNow()"><i class="fa fa-bolt"></i> Buy Now</button>
+                        <button class="btn-secondary-green" onclick="addToCart(currentProduct)" title="কার্টে যোগ করুন"><i class="fa fa-shopping-cart"></i></button>
+                        <button class="btn-primary" style="width: auto; padding: 14px 32px; border-radius: 30px; background: linear-gradient(135deg, var(--accent-pink) 0%, var(--primary) 100%); box-shadow: var(--pink-glow); border: none;" onclick="buyNow()"><i class="fa fa-bolt"></i> এখনই কিনুন</button>
                     </div>
                 </div>
 
@@ -568,26 +568,26 @@
                 <!-- NEW: Identical Premium Glass Buy Bar placed BELOW description for effortless purchasing -->
                 <div class="static-buy-bar">
                     <div class="flex-col justify-center">
-                        <span style="font-size: 11px; color: var(--text-light); text-transform: uppercase; font-weight: 800; letter-spacing: 0.5px;">Price</span>
-                        <strong class="buy-bar-price" style="font-size: 22px; color: var(--accent); font-weight: 850; text-shadow: var(--neon-shadow);">৳0</strong>
+                        <span style="font-size: 11px; color: var(--text-light); text-transform: uppercase; font-weight: 800; letter-spacing: 0.5px;">মূল্য</span>
+                        <strong class="buy-bar-price" style="font-size: 22px; color: var(--accent); font-weight: 850; text-shadow: var(--neon-shadow);">৳০</strong>
                     </div>
                     <div class="flex gap-10 items-center" style="margin-left: auto;">
-                        <button class="btn-secondary-green" onclick="addToCart(currentProduct)" title="Add to Cart"><i class="fa fa-shopping-cart"></i></button>
-                        <button class="btn-primary" style="width: auto; padding: 14px 32px; border-radius: 30px; background: linear-gradient(135deg, var(--accent-pink) 0%, var(--primary) 100%); box-shadow: var(--pink-glow); border: none;" onclick="buyNow()"><i class="fa fa-bolt"></i> Buy Now</button>
+                        <button class="btn-secondary-green" onclick="addToCart(currentProduct)" title="কার্টে যোগ করুন"><i class="fa fa-shopping-cart"></i></button>
+                        <button class="btn-primary" style="width: auto; padding: 14px 32px; border-radius: 30px; background: linear-gradient(135deg, var(--accent-pink) 0%, var(--primary) 100%); box-shadow: var(--pink-glow); border: none;" onclick="buyNow()"><i class="fa fa-bolt"></i> এখনই কিনুন</button>
                     </div>
                 </div>
 
                 <div id="prodVideoContainer" class="hidden mt-10 mb-20">
-                    <strong style="font-size: 14px; display: block; margin-bottom: 10px;">Product Video:</strong>
+                    <strong style="font-size: 14px; display: block; margin-bottom: 10px;">পণ্যের ভিডিও:</strong>
                     <iframe id="prodVideo" width="100%" height="220" style="border-radius: var(--radius); margin-top: 10px; border: 1px solid var(--border); box-shadow: var(--purple-glow);" frameborder="0" allowfullscreen></iframe>
                 </div>
 
-                <strong style="font-size: 16px; display: block; margin-bottom: 10px; border-top: 1px solid var(--border); padding-top: 20px;">Reviews</strong>
+                <strong style="font-size: 16px; display: block; margin-bottom: 10px; border-top: 1px solid var(--border); padding-top: 20px;">রিভিউসমূহ</strong>
                 <div id="prodReviews" class="mt-10"></div>
                 
                 <!-- Related Products Section -->
                 <div class="mt-20 hidden" id="relatedProductsSection">
-                    <strong style="font-size: 16px; display: block; margin-bottom: 14px; border-top: 1px solid var(--border); padding-top: 20px;">Related Products</strong>
+                    <strong style="font-size: 16px; display: block; margin-bottom: 14px; border-top: 1px solid var(--border); padding-top: 20px;">সম্পর্কিত পণ্যসমূহ</strong>
                     <div class="h-scroll" id="relatedProductsContainer"></div>
                 </div>
             </div>
@@ -595,124 +595,133 @@
 
         <!-- Checkout View -->
         <div id="view-checkout" class="view p-15">
-            <h2 class="mb-20" style="font-weight: 800; text-shadow: var(--purple-glow);">Checkout</h2>
+            <h2 class="mb-20" style="font-weight: 800; text-shadow: var(--purple-glow);">চেকআউট</h2>
             
             <!-- Shipping Form -->
             <div class="card">
-                <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 15px; border-bottom: 1px solid var(--border); padding-bottom: 10px; color: var(--accent); text-shadow: var(--neon-shadow);"><i class="fa fa-map-marker-alt" style="color: var(--accent); margin-right: 8px;"></i>Shipping Address</h3>
+                <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 15px; border-bottom: 1px solid var(--border); padding-bottom: 10px; color: var(--accent); text-shadow: var(--neon-shadow);"><i class="fa fa-map-marker-alt" style="color: var(--accent); margin-right: 8px;"></i>ডেলিভারি ঠিকানা</h3>
                 
                 <div class="form-group">
-                    <label>Full Name</label>
-                    <input type="text" id="chkName" placeholder="Enter your full name">
+                    <label>পূর্ণ নাম</label>
+                    <input type="text" id="chkName" placeholder="আপনার পূর্ণ নাম লিখুন">
                 </div>
                 
                 <div class="form-group">
-                    <label>Phone Number</label>
-                    <input type="tel" id="chkPhone" placeholder="Enter phone number">
+                    <label>মোবাইল নম্বর</label>
+                    <input type="tel" id="chkPhone" placeholder="মোবাইল নম্বর লিখুন">
                 </div>
                 
                 <div class="form-group">
-                    <label>Province / Region</label>
+                    <label>বিভাগ</label>
                     <select id="chkRegion">
-                        <option value="">Select Province / Region</option>
-                        <option>Barishal</option><option>Chattogram</option><option>Dhaka</option>
-                        <option>Khulna</option><option>Mymensingh</option><option>Rajshahi</option>
-                        <option>Rangpur</option><option>Sylhet</option>
+                        <option value="">বিভাগ নির্বাচন করুন</option>
+                        <option value="ঢাকা">ঢাকা</option>
+                        <option value="চট্টগ্রাম">চট্টগ্রাম</option>
+                        <option value="রাজশাহী">রাজশাহী</option>
+                        <option value="খুলনা">খুলনা</option>
+                        <option value="বরিশাল">বরিশাল</option>
+                        <option value="সিলেট">সিলেট</option>
+                        <option value="রংপুর">রংপুর</option>
+                        <option value="ময়মনসিংহ">ময়মনসিংহ</option>
                     </select>
                 </div>
                 
                 <div class="grid-2">
                     <div class="form-group">
-                        <label>City</label>
-                        <input type="text" id="chkCity" placeholder="City">
+                        <label>জেলা</label>
+                        <select id="chkCity">
+                            <option value="">জেলা নির্বাচন করুন</option>
+                        </select>
                     </div>
                     <div class="form-group">
-                        <label>Zone</label>
-                        <input type="text" id="chkZone" placeholder="Zone">
+                        <label>উপজেলা / থানা</label>
+                        <select id="chkZone">
+                            <option value="">উপজেলা নির্বাচন করুন</option>
+                        </select>
                     </div>
                 </div>
                 
                 <div class="form-group">
-                    <label>Full Address</label>
-                    <textarea id="chkAddress" placeholder="House no, road, area details..." rows="3"></textarea>
+                    <label>বিস্তারিত ঠিকানা</label>
+                    <textarea id="chkAddress" placeholder="বাসা নং, রোড, এলাকা বিস্তারিত..." rows="3"></textarea>
                 </div>
                 
                 <div class="form-group">
-                    <label>Landmark (Optional)</label>
-                    <input type="text" id="chkLandmark" placeholder="e.g. Near school or market">
+                    <label>পরিচিত স্থান বা ল্যান্ডমার্ক (ঐচ্ছিক)</label>
+                    <input type="text" id="chkLandmark" placeholder="যেমন: স্কুলের পাশে বা বাজারের কাছে">
                 </div>
                 
                 <div class="form-group">
-                    <label>Address Label</label>
+                    <label>ঠিকানার ধরন</label>
                     <select id="chkLabel">
-                        <option value="Home">Home</option>
-                        <option value="Office">Office</option>
+                        <option value="Home">বাসা (Home)</option>
+                        <option value="Office">অফিস (Office)</option>
                     </select>
                 </div>
                 
                 <div class="checkbox-group">
                     <label>
                         <input type="checkbox" id="chkDefShip"> 
-                        <span>Make default shipping address</span>
+                        <span>ডিফল্ট ডেলিভারি ঠিকানা হিসেবে সেট করুন</span>
                     </label>
                     <label>
                         <input type="checkbox" id="chkDefBill"> 
-                        <span>Make default billing address</span>
+                        <span>ডিফল্ট বিলিং ঠিকানা হিসেবে সেট করুন</span>
                     </label>
                 </div>
             </div>
             
             <!-- Order Summary -->
             <div class="card mt-10">
-                <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 15px; border-bottom: 1px solid var(--border); padding-bottom: 10px; color: var(--accent); text-shadow: var(--neon-shadow);"><i class="fa fa-shopping-basket" style="color: var(--accent); margin-right: 8px;"></i>Order Summary</h3>
+                <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 15px; border-bottom: 1px solid var(--border); padding-bottom: 10px; color: var(--accent); text-shadow: var(--neon-shadow);"><i class="fa fa-shopping-basket" style="color: var(--accent); margin-right: 8px;"></i>অর্ডারের বিবরণ</h3>
                 <div id="chkItems" class="summary-list"></div>
                 <div class="summary-list mt-10">
-                    <div class="summary-row"><span>Subtotal</span> <strong id="chkSub"></strong></div>
-                    <div class="summary-row"><span>Delivery Charge</span> <strong id="chkDel"></strong></div>
-                    <div class="summary-row total-row"><span>Total</span> <strong id="chkTotal"></strong></div>
+                    <div class="summary-row"><span>মোট পণ্যের দাম</span> <strong id="chkSub"></strong></div>
+                    <div class="summary-row"><span>ডেলিভারি চার্জ</span> <strong id="chkDel"></strong></div>
+                    <div class="summary-row total-row"><span>সর্বমোট</span> <strong id="chkTotal"></strong></div>
                 </div>
             </div>
 
             <!-- Payment Details -->
             <div class="card mt-10">
-                <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 15px; border-bottom: 1px solid var(--border); padding-bottom: 10px; color: var(--accent); text-shadow: var(--neon-shadow);"><i class="fa fa-credit-card" style="color: var(--accent); margin-right: 8px;"></i>Payment Method</h3>
+                <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 15px; border-bottom: 1px solid var(--border); padding-bottom: 10px; color: var(--accent); text-shadow: var(--neon-shadow);"><i class="fa fa-credit-card" style="color: var(--accent); margin-right: 8px;"></i>পেমেন্ট পদ্ধতি</h3>
                 <div class="form-group">
-                    <label>Select Payment Method</label>
+                    <label>পেমেন্ট পদ্ধতি নির্বাচন করুন</label>
                     <select id="payMethod" disabled>
-                        <option value="Cash on Delivery" selected>Cash on Delivery</option>
+                        <option value="Cash on Delivery" selected>ک্যাশ অন ডেলিভারি (Cash on Delivery)</option>
                     </select>
                 </div>
                 <input type="hidden" id="payTrx" value="N/A">
             </div>
 
-            <button class="btn-primary mt-10" style="margin-bottom: 30px;" onclick="placeOrder()"><i class="fa fa-check-circle"></i> Place Order</button>
+            <button class="btn-primary mt-10" style="margin-bottom: 30px;" onclick="placeOrder()"><i class="fa fa-check-circle"></i> অর্ডার সম্পন্ন করুন</button>
         </div>
 
         <!-- Orders View -->
         <div id="view-orders" class="view p-15">
-            <h2 class="mb-20" style="font-weight: 800; text-shadow: var(--purple-glow);">My Orders</h2>
+            <h2 class="mb-20" style="font-weight: 800; text-shadow: var(--purple-glow);">আমার অর্ডার</h2>
             <div id="myOrdersList" class="mt-10"></div>
         </div>
         
         <!-- Wishlist View -->
         <div id="view-wishlist" class="view p-15">
-            <h2 class="mb-20" style="font-weight: 800; text-shadow: var(--purple-glow);">My Wishlist</h2>
+            <h2 class="mb-20" style="font-weight: 800; text-shadow: var(--purple-glow);">আমার উইশলিস্ট</h2>
             <div class="grid-2 mt-10" id="myWishlistList"></div>
         </div>
 
         <!-- Feedback View -->
         <div id="view-feedback" class="view p-15">
             <div class="card">
-                <h2 style="font-weight: 800; margin-bottom: 12px; text-shadow: var(--purple-glow);">Send Feedback</h2>
-                <textarea id="feedMsg" placeholder="Write your message..." rows="5" class="mt-10 mb-10"></textarea>
-                <button class="btn-primary" onclick="submitFeedback()"><i class="fa fa-paper-plane"></i> Submit</button>
+                <h2 style="font-weight: 800; margin-bottom: 12px; text-shadow: var(--purple-glow);">মতামত পাঠান</h2>
+                <textarea id="feedMsg" placeholder="আপনার মতামত লিখুন..." rows="5" class="mt-10 mb-10"></textarea>
+                <button class="btn-primary" onclick="submitFeedback()"><i class="fa fa-paper-plane"></i> জমা দিন</button>
             </div>
         </div>
         
         <!-- Help View -->
         <div id="view-help" class="view p-15">
             <div class="card">
-                <h2 style="font-weight: 800; margin-bottom: 12px; text-shadow: var(--purple-glow);">Help & Policies</h2>
+                <h2 style="font-weight: 800; margin-bottom: 12px; text-shadow: var(--purple-glow);">সহায়তা ও নীতিমালা</h2>
                 <div id="policyContent" class="mt-10" style="line-height:1.6; color:var(--text-light); font-size:14px;"></div>
             </div>
         </div>
@@ -720,10 +729,10 @@
 
     <!-- Bottom Navigation Pill -->
     <div class="bottom-nav">
-        <a href="javascript:nav('home')" class="nav-item active" id="bn-home"><i class="fa fa-home"></i> Home</a>
-        <a href="javascript:nav('categories')" class="nav-item" id="bn-categories"><i class="fa fa-th-large"></i> Categories</a>
-        <a href="javascript:nav('cart')" class="nav-item" id="bn-cart" style="position:relative;"><i class="fa fa-shopping-cart"></i> Cart<span class="cart-badge" id="cartBadge">0</span></a>
-        <a href="javascript:nav('account')" class="nav-item" id="bn-account"><i class="fa fa-user"></i> Account</a>
+        <a href="javascript:nav('home')" class="nav-item active" id="bn-home"><i class="fa fa-home"></i> হোম</a>
+        <a href="javascript:nav('categories')" class="nav-item" id="bn-categories"><i class="fa fa-th-large"></i> ক্যাটাগরি</a>
+        <a href="javascript:nav('cart')" class="nav-item" id="bn-cart" style="position:relative;"><i class="fa fa-shopping-cart"></i> কার্ট<span class="cart-badge" id="cartBadge">0</span></a>
+        <a href="javascript:nav('account')" class="nav-item" id="bn-account"><i class="fa fa-user"></i> প্রোফাইল</a>
     </div>
 
     <!-- Modals & Utilities -->
@@ -756,6 +765,90 @@
         if (!firebase.apps.length) { firebase.initializeApp(firebaseConfig); }
         const db = firebase.database();
 
+        // বাংলাদেশের সব বিভাগ, জেলা এবং উপজেলা ভিত্তিক ডাইনামিক ডেটাবেজ
+        const bdLocations = {
+            "ঢাকা": {
+                "ঢাকা": ["মিরপুর", "উত্তরা", "ধানমন্ডি", "গুলশান", "বনানী", "মোহাম্মদপুর", "বাড্ডা", "খিলগাঁও", "মতিঝিল", "লালবাগ", "তেজগাঁও", "রমনা", "সাভার", "ধামরাই", "কেরানীগঞ্জ", "দোহার", "নবাবগঞ্জ", "খিলক্ষেত", "ভাটারা", "রামপুরা", "পল্টন", "যাত্রাবাড়ী", "দমুড়া", "হাজারীবাগ", "শ্যামপুর", "কামরাঙ্গীরচর"],
+                "গাজীপুর": ["গাজীপুর সদর", "কালিয়াকৈর", "কালীগঞ্জ", "কাপাসিয়া", "শ্রীপুর"],
+                "নারায়ণগঞ্জ": ["নারায়ণগঞ্জ সদর", "বন্দর", "আড়াইহাজার", "রূপগঞ্জ", "সোনারগাঁও"],
+                "নরসিংদী": ["নরসিংদী সদর", "বেলাবো", "মনোহরদী", "পলাশ", "রায়পুরা", "শিবপুর"],
+                "মানিকগঞ্জ": ["মানিকগঞ্জ সদর", "সিংগাইর", "শিবালয়", "সাটুরিয়া", "হরিরামপুর", "ঘিওর", "দৌলতপুর"],
+                "মুন্সিগঞ্জ": ["মুন্সিগঞ্জ সদর", "টংগিবাড়ী", "শ্রীনগর", "লৌহজং", "গজারিয়া", "সিরাজদিখান"],
+                "ফরিদপুর": ["ফরিদপুর সদর", "ভাঙ্গা", "বোয়ালমারী", "আলফাডাঙ্গা", "মধুখালী", "নগরকান্দা", "সালथा", "সাদরপুর", "চরভদ্রাসন"],
+                "গোপালগঞ্জ": ["গোপালগঞ্জ সদর", "টুঙ্গিপাড়া", "কোটালীপাড়া", "কাশিয়ানী", "مুকসুদপুর"],
+                "মাদারীপুর": ["মাদারীপুর সদর", "শিবচর", "কালকিনি", "রাজৈর"],
+                "শরীয়তপুর": ["শরীয়তপুর সদর", "ডামুড্যা", "নড়িয়া", "জাজিরা", "গোসারহাট", "ভেদরগঞ্জ"],
+                "রাজবাড়ী": ["রাজবাড়ী সদর", "গোয়ালন্দ", "পাংশা", "বালিয়াকান্দি", "কালুখালী"],
+                "টাঙ্গাইল": ["টাঙ্গাইল সদর", "মির্জাপুর", "কালিহাতী", "ঘাটাইল", "সখিপুর", "বাসাইল", "দেলদুয়ার", "নাগরপুর", "ভূঞাপুর", "গোপালপুর", "مধুপুর", "ধনবাড়ী"],
+                "কিশোরগঞ্জ": ["কিশোরগঞ্জ সদর", "ভৈরব", "বাজিতপুর", "করিমগঞ্জ", "কটিয়াদী", "কুলিয়ারচর", "তাড়াইল", "হোসেনপুর", "পাকুন্দিয়া", "মিঠামইন", "ইটনা", "অষ্টগ্রাম", "নিকলী"]
+            },
+            "চট্টগ্রাম": {
+                "চট্টগ্রাম": ["চট্টগ্রাম সদর", "পতেঙ্গা", "হালিশহর", "খুলশী", "পাঁচলাইশ", "ডবলমুরিং", "কোতোয়ালী", "হাটহাজারী", "পটিয়া", "রাউজান", "রাঙ্গুনিয়া", "বোয়ালখালী", "আনোয়ারা", "চন্দনাইশ", "বাঁশখালী", "সীতাকুণ্ড", "মিরসরাই", "সন্দ্বীপ", "লোহাগাড়া", "সাতকানিয়া"],
+                "কক্সবাজার": ["কক্সবাজার সদর", "উখিয়া", "টেকনাফ", "রামু", "চকরিয়া", "পেকুয়া", "মহেশখালী", "কুতুবদিয়া"],
+                "নোয়াখালী": ["নোয়াখালী সদর", "বেগমগঞ্জ", "সেনবাগ", "চাটখিল", "সোনাইমুড়ী", "কোম্পানীগঞ্জ", "হাতিয়া", "কবিরহাট", "সুবর্ণচর"],
+                "ফেনী": ["ফেনী সদর", "দাগনভূঞা", "ছাগলনাইয়া", "পরশুরাম", "ফুলগাজী", "সোনাগাজী"],
+                "লক্ষ্মীপুর": ["লক্ষ্মীপুর সদর", "রায়পুর", "রামগঞ্জ", "রামগতি", "কমলনগর"],
+                "কুমিল্লা": ["কুমিল্লা সদর", "চৌদ্দগ্রাম", "লাকসাম", "বরুড়া", "দেবিদ্বার", "দাউদকান্দি", "মুরাদনগর", "হোমনা", "লাঙ্গলকোট", "বুড়িচং", "ব্রাহ্মণপাড়া", "মনোহরগঞ্জ", "মেঘনা", "তিতাস"],
+                "চাঁদপুর": ["চাঁদপুর সদর", "হাজীগঞ্জ", "শাহরাস্তি", "ফরিদগঞ্জ", "মতলব উত্তর", "মতলব দক্ষিণ", "হাইমচর", "কচুয়া"],
+                "ব্রাহ্মণবাড়িয়া": ["ব্রাহ্মণবাড়িয়া সদর", "আশুগঞ্জ", "সরাইল", "নাসিরনগর", "নবীনগর", "বাঞ্ছারামপুর", "কসবা", "আখাউড়া", "বিজয়নগর"],
+                "রাঙ্গামাটি": ["রাঙ্গামাটি সদর", "কাপ্তাই", "কাউখালী", "বাঘাইছড়ি", "লংগদু", "নানিয়ারচর", "রাজস্থলী", "জুরাছড়ি", "বিলাইছড়ি", "বরকল"],
+                "বান্দরবান": ["বান্দরবান সদর", "রুমা", "থানচি", "রোয়াংছড়ি", "লামা", "আলীকদম", "নাইক্ষ্যংছড়ি"],
+                "খাগড়াছড়ি": ["খাগড়াছড়ি সদর", "দীঘিনালা", "পানছড়ি", "মাটিরাঙ্গা", "মহালছড়ি", "মানিকছড়ি", "রামগড়", "গুইমারা", "লক্ষ্মীছড়ি"]
+            },
+            "রাজশাহী": {
+                "রাজশাহী": ["বোয়ালিয়া", "মতিহার", "রাজপাড়া", "শাহ মখদুম", "পবা", "গোদাগাড়ী", "তানোর", "বাঘা", "চারঘাট", "দুর্গাপুর", "পুঠিয়া", "বাগমারা", "মোহনপুর"],
+                "বগুড়া": ["বগুড়া সদর", "শেরপুর", "শিবগঞ্জ", "শাজাহানপুর", "গাবতলী", "ধুনট", "সারিয়াকান্দি", "নন্দীগ্রাম", "কাহালু", "আদমদীঘি", "দুপচাঁচিয়া", "সোনাতলা"],
+                "জয়পুরহাট": ["জয়পুরহাট সদর", "পাঁচবিবি", "কালাই", "ক্ষেতলাল", "আক্কেলপুর"],
+                "নওগাঁ": ["নওগাঁ সদর", "পত্নীতলা", "ধামইরহাট", "মহাদেবপুর", "পোরশা", "সাপাহার", "বদলগাছী", "আত্রাই", "রানীনগর", "মান্দা", "নিয়ামতপুর"],
+                "নাটোর": ["নাটোর সদর", "সিংড়া", "বাগাতিপাড়া", "লালপুর", "বড়াইগ্রাম", "গুরুদাসপুর"],
+                "পাবনা": ["পাবনা সদর", "ঈশ্বরদী", "চাটমোহর", "সুজানগর", "সাঁথিয়া", "বেড়া", "আটঘরিয়া", "ফরিদপুর", "ভাঙ্গুড়া"],
+                "সিরাজগঞ্জ": ["সিরাজগঞ্জ সদর", "শাহজাদপুর", "উল্লাপাড়া", "বেলকুচি", "কাজিপুর", "রায়গঞ্জ", "তাড়াশ", "কামারখন্দ", "চৌহালী"],
+                "চাঁপাইনবাবগঞ্জ": ["চাঁপাইনবাবগঞ্জ সদর", "শিবগঞ্জ", "গোমস্তাপুর", "নাচোল", "ভোলাহাট"]
+            },
+            "খুলনা": {
+                "খুলনা": ["খুলনা সদর", "দৌলতপুর", "খালিশপুর", "خان জাহান আলী", "বটিয়াঘাটা", "দাকোপ", "ডুমুরিয়া", "দিঘলিয়া", "কয়রা", "পাইকগাছা", "ফুলতলা", "রূপসা"],
+                "যশোর": ["যশোর সদর", "ঝিকরগাছা", "চৌগাছা", "শার্শা", "মণিরামপুর", "অভয়নগর", "বাঘেরপাড়া", "কেশবপুর"],
+                "বাগেরহাট": ["বাগেরহাট সদর", "মংলা", "মোড়েলগঞ্জ", "শরণখোলা", "রামপাল", "ফকিরহাট", "কচুয়া", "মোল্লাহাট", "চিতলমারী"],
+                "সাতক্ষীরা": ["সাতক্ষীরা সদর", "শ্যামনগর", "কালীগঞ্জ", "আশাশুনি", "দেবহাটা", "তালা", "কলারোয়া"],
+                "কুষ্টিয়া": ["কুষ্টিয়া সদর", "কুমারখালী", "খোকসা", "মিরপুর", "ভেড়ামারা", "দৌলতপুর"],
+                "মাগুরা": ["মাগুরা সদর", "শ্রীপুর", "শালিখা", "মহম্মদপুর"],
+                "মেহেরপুর": ["মেহেরপুর সদর", "গাংনী", "মুজিবনগর"],
+                "নড়াইল": ["নড়াইল সদর", "লোহাগড়া", "কালিয়া"],
+                "ঝিনাইদহ": ["ঝিনাইদহ সদর", "শৈলকুপা", "হরিণাকুণ্ডু", "কালীগঞ্জ", "কোটচাঁদপুর", "মহেশপুর"],
+                "চুয়াডাঙ্গা": ["চুয়াডাঙ্গা সদর", "আলমডাঙ্গা", "দামুড়হুদা", "জীবননগর"]
+            },
+            "বরিশাল": {
+                "বরিশাল": ["বরিশাল সদর", "বাকেরগঞ্জ", "বাবুগঞ্জ", "উজিরপুর", "বানারীপাড়া", "গৌরনদী", "মুলাদী", "হিজলা", "মেহেন্দিগঞ্জ", "আগৈলঝরা"],
+                "পটুয়াখালী": ["পটুয়াখালী সদর", "গলাচিপা", "বাউফল", "কলাপাড়া", "দশমিনা", "মির্জাগঞ্জ", "দুমকি", "রাঙ্গাবালী"],
+                "ভোলা": ["ভোলা সদর", "বোরহানউদ্দিন", "চরফ্যাশন", "লালমোহন", "তজুমদ্দিন", "দৌলতখান", "মনপুরা"],
+                "পিরোজপুর": ["পিরোজপুর সদর", "ভান্ডারিয়া", "مঠবাড়িয়া", "নেছারাবাদ", "নাজিরপুর", "কাউখালী", "ইন্দুরকানী"],
+                "বরগুনা": ["বরগুনা সদর", "আমতলী", "পাথরঘাটা", "বামনা", "বেতাগী", "তালতলী"],
+                "ঝালকাঠি": ["ঝালকাঠি সদর", "নলছিটি", "রাজাপুর", "কাঠালিয়া"]
+            },
+            "সিলেট": {
+                "সিলেট": ["সিলেট সদর", "বিয়ানীবাজার", "গোলাপগঞ্জ", "জকিগঞ্জ", "কানাইঘাট", "ফেঞ্চুগঞ্জ", "বালাগঞ্জ", "বিশ্বনাথ", "গোয়াইনঘাট", "জৈন্তিয়াপুর", "কোম্পানীগঞ্জ", "দক্ষিণ সুরমা", "ওসমানীনগর"],
+                "মৌলভীবাজার": ["مৌলভীবাজার সদর", "শ্রীমঙ্গল", "কুলাউড়া", "রাজনগর", "কমলগঞ্জ", "জুড়ী", "বড়লেখা"],
+                "হবিগঞ্জ": ["হবিগঞ্জ সদর", "মাধবপুর", "চুনারুঘাট", "বাহুবল", "নবীগঞ্জ", "আজমিরীগঞ্জ", "বানিয়াচং", "লাখাই", "শায়েস্তাগঞ্জ"],
+                "সুনামগঞ্জ": ["সুনামগঞ্জ সদর", "ছাতক", "জগন্নাথপুর", "দিরাই", "শাল্লা", "ধর্মপাশা", "জামালগঞ্জ", "তাহিরপুর", "বিশ্বম্ভরপুর", "দোয়ারাবাজার", "দক্ষিণ সুনামগঞ্জ"]
+            },
+            "রংপুর": {
+                "রংপুর": ["রংপুর সদর", "মিঠাপুকুর", "পীরগঞ্জ", "পীরগাছা", "কাউনিয়া", "গঙ্গাচড়া", "তারাগঞ্জ", "বদরগঞ্জ"],
+                "দিনাজপুর": ["দিনাজপুর সদর", "পার্বতীপুর", "ফুলবাড়ী", "বিরামপুর", "হাকিমপুর", "নবাবগঞ্জ", "ঘোড়াঘাট", "বীরগঞ্জ", "কাহারোল", "বোচাগঞ্জ", "চিরিরবন্দর", "খানসামা"],
+                "গাইবান্ধা": ["গাইবান্ধা সদর", "গোবিন্দগঞ্জ", "পলাশবাড়ী", "সাদুল্লাপুর", "সুন্দরগঞ্জ", "সাঘাটা", "ফুলছড়ি"],
+                "কুড়িগ্রাম": ["কুড়িগ্রাম সদর", "উলিপুর", "চিলমারী", "রৌমারী", "রাজিবপুর", "নাগেশ্বরী", "ভুরুঙ্গামারী", "ফুলবাড়ী", "রাজারহাট"],
+                "লালমনিরহাট": ["লালমনিরহাট সদর", "পাটগ্রাম", "হাতীবান্ধা", "কালীগঞ্জ", "আদিতমারী"],
+                "নীলফামারী": ["নীলফামারী সদর", "সৈয়দপুর", "ডোমার", "ডিমলা", "জলঢাকা", "কিশোরগঞ্জ"],
+                "পঞ্চগড়": ["পঞ্চগড় সদর", "তেঁতুলিয়া", "দেবীগঞ্জ", "বোদা", "আটোয়ারী"],
+                "ঠাকুরগাঁও": ["ঠাকুরগাঁও সদর", "পীরগঞ্জ", "বালীয়াডাঙ্গী", "রাণীশংকৈল", "হরিপুর", "রুহিয়া"]
+            },
+            "ময়মনসিংহ": {
+                "ময়মনসিংহ": ["ময়মনসিংহ সদর", "মুক্তাগাছা", "ফুলবাড়ীয়া", "ত্রিশাল", "ভালুকা", "গফরগাঁও", "ঈশ্বরগঞ্জ", "নন্দাইল", "গৌরীপুর", "হালুয়াঘাট", "ধোবাউড়া", "ফুলপুর", "তারাকান্দা"],
+                "জামালপুর": ["জামালপুর সদর", "সরিষাবাড়ী", "মেলান্দহ", "ইসলামপুর", "দেওয়ানগঞ্জ", "বকশীগঞ্জ", "مাদারগঞ্জ"],
+                "নেত্রকোনা": ["নেত্রকোনা সদর", "বারহাট্টা", "কলমাকান্দা", "দুর্গাপুর", "পূর্বধলা", "মোহনগঞ্জ", "মদন", "খালিয়াজুরী", "কেন্দুয়া", "আটপাড়া"],
+                "শেরপুর": ["শেরপুর সদর", "নকলা", "নালিতাবাড়ী", "ঝিনাইগাতী", "শ্রীবরদী"]
+            }
+        };
+
         // State & Auto-Generated Local Guest Session (Bypasses Login entirely)
         let guestUid = localStorage.getItem('guestUid');
         if (!guestUid) {
@@ -763,13 +856,13 @@
             localStorage.setItem('guestUid', guestUid);
         }
 
-        let currentUser = { uid: guestUid, name: 'Guest', email: 'No login required' };
+        let currentUser = { uid: guestUid, name: 'অতিথি', email: 'লগইন প্রয়োজন নেই' };
         let products = [];
         let categories =[];
         let cart = JSON.parse(localStorage.getItem('cart')) ||[];
         let savedItems = JSON.parse(localStorage.getItem('savedItems')) || [];
         let wishlist =[];
-        let settings = { delivery: 50, bkash: '', nagad: '', phone: '', appName: 'NF World', appLogo: '' };
+        let settings = { delivery: 50, bkash: '', nagad: '', phone: '', appName: 'এনএফ ওয়ার্ল্ড', appLogo: '' };
         let currentProduct = null;
         let selectedSize = null;
         let selectedColor = null;
@@ -842,6 +935,7 @@
         window.addEventListener('load', () => {
             let viewId = window.location.hash.replace('#', '') || 'home';
             navigateDirectly(viewId);
+            initLocationListeners(); // বাংলাদেশ লোকেশন সিস্টেম ইনিশিয়েট
         });
 
         // Back to top
@@ -857,7 +951,7 @@
             
             // Realtime push notifications for order updates
             db.ref(`notifications/${currentUser.uid}`).on('child_added', s => {
-                showToast(`Order Update: ${s.val().msg}`);
+                showToast(`অর্ডার আপডেট: ${s.val().msg}`);
                 db.ref(`notifications/${currentUser.uid}/${s.key}`).remove();
             });
 
@@ -872,7 +966,7 @@
                 let html = '';
                 if(s.exists()) {
                     Object.values(s.val()).forEach(b => {
-                        html += `<img src="${b.url}" alt="Banner">`;
+                        html += `<img src="${b.url}" alt="ব্যানার">`;
                     });
                 }
                 $('#bannerContainer').innerHTML = html;
@@ -893,8 +987,8 @@
                         $('#appTitle').innerText = settings.appName;
                         document.title = settings.appName;
                     } else {
-                        $('#appTitle').innerText = "NF World";
-                        document.title = "NF World";
+                        $('#appTitle').innerText = "এনএফ ওয়ার্ল্ড";
+                        document.title = "এনএফ ওয়ার্ল্ড";
                     }
 
                     if(settings.appLogo) {
@@ -958,14 +1052,14 @@
             const activeProds = products.filter(p => p.stock > 0);
             let matches = activeProds.filter(p => p.name.toLowerCase().includes(val) || (p.category && p.category.toLowerCase().includes(val)));
             
-            $('#recommendedContainer').innerHTML = matches.map(generateCard).join('') || '<p style="grid-column: span 2; text-align: center; color: var(--text-light); padding: 20px;">No products found</p>';
+            $('#recommendedContainer').innerHTML = matches.map(generateCard).join('') || '<p style="grid-column: span 2; text-align: center; color: var(--text-light); padding: 20px;">কোনো পণ্য পাওয়া যায়নি</p>';
             $('#searchSuggestions').classList.add('hidden');
             
             nav('home'); // Ensure they are returned to Home View to view search results
             
             const recommendedEl = $('#recommendedContainer').previousElementSibling;
             if (recommendedEl) {
-                recommendedEl.innerHTML = `Search Results for "${val}" <span style="color:var(--text-light); font-size:12px; font-weight:normal;">(${matches.length} found)</span>`;
+                recommendedEl.innerHTML = `"${val}" এর অনুসন্ধানের ফলাফল <span style="color:var(--text-light); font-size:12px; font-weight:normal;">(${matches.length}টি পাওয়া গেছে)</span>`;
                 recommendedEl.scrollIntoView({ behavior: 'smooth' });
             }
         }
@@ -984,10 +1078,10 @@
                     <img src="${p.image}">
                     <div class="p-name">${p.name}</div>
                     <div class="p-price">${priceHTML}</div>
-                    <div class="p-meta"><span>⭐ ${p.rating||5}</span> <span>Sold: ${p.sold||0}</span></div>
+                    <div class="p-meta"><span>⭐ ${p.rating||5}</span> <span>বিক্রি: ${p.sold||0}</span></div>
                     <div class="card-actions">
-                        <button class="btn-card-add" onclick="event.stopPropagation(); quickAdd('${p.id}')" title="Add to Cart"><i class="fa fa-shopping-cart"></i></button>
-                        <button class="btn-card-buy" onclick="event.stopPropagation(); quickBuy('${p.id}')">Buy Now</button>
+                        <button class="btn-card-add" onclick="event.stopPropagation(); quickAdd('${p.id}')" title="কার্টে যোগ করুন"><i class="fa fa-shopping-cart"></i></button>
+                        <button class="btn-card-buy" onclick="event.stopPropagation(); quickBuy('${p.id}')">এখনই কিনুন</button>
                     </div>
                 </div>
             `;
@@ -996,7 +1090,7 @@
         function renderHomeProducts() {
             const activeProds = products.filter(p => p.stock > 0);
             // Flash Sale (discounted)
-            $('#flashSaleContainer').innerHTML = activeProds.filter(p => p.discount > 0).map(generateCard).join('') || '<p style="padding:20px; color:var(--text-light);">No active flash sales</p>';
+            $('#flashSaleContainer').innerHTML = activeProds.filter(p => p.discount > 0).map(generateCard).join('') || '<p style="padding:20px; color:var(--text-light);">কোনো অফার পাওয়া যায়নি</p>';
             // Trending (sold > 0)
             $('#trendingContainer').innerHTML = activeProds.sort((a,b) => (b.sold||0) - (a.sold||0)).slice(0,10).map(generateCard).join('');
             // Recommended
@@ -1035,10 +1129,10 @@
             $('#prodName').innerText = p.name;
             $('#prodPrice').innerHTML = p.discount > 0 ? `৳${Math.round(p.price - (p.price*(p.discount/100)))} <del style="font-size:15px;color:var(--text-light)">৳${p.price}</del>` : `৳${p.price}`;
             $('#prodRating').innerText = `⭐ ${p.rating||5}`;
-            $('#prodSold').innerText = `${p.sold||0} Sold`;
+            $('#prodSold').innerText = `${p.sold||0} টি বিক্রি হয়েছে`;
             $('#prodDesc').innerText = p.desc;
-            $('#prodEta').innerText = p.eta || '3-5 Days';
-            $('#prodStock').innerText = p.stock > 0 ? 'In Stock' : 'Out of Stock';
+            $('#prodEta').innerText = p.eta || '৩-৫ দিন';
+            $('#prodStock').innerText = p.stock > 0 ? 'স্টকে আছে' : 'স্টকে নেই';
 
             // Safe Price parsing
             let basePrice = 0;
@@ -1090,7 +1184,7 @@
                     let r = Object.values(s.val());
                     $('#prodReviews').innerHTML = r.map(rev => `<div class="card mt-10" style="padding:16px;"><strong>${rev.name}</strong> ⭐${rev.rating}<p style="margin-top:5px;font-size:13px;color:var(--text-light);">${rev.text}</p></div>`).join('');
                 } else {
-                    $('#prodReviews').innerHTML = '<p class="text-light mt-10">No reviews yet.</p>';
+                    $('#prodReviews').innerHTML = '<p class="text-light mt-10">এখনো কোনো রিভিউ দেওয়া হয়নি।</p>';
                 }
             });
 
@@ -1145,7 +1239,7 @@
                 `).join('');
                 box.classList.remove('hidden');
             } else {
-                box.innerHTML = '<div class="search-item">No products found</div>';
+                box.innerHTML = '<div class="search-item">কোনো পণ্য পাওয়া যায়নি</div>';
                 box.classList.remove('hidden');
             }
         });
@@ -1173,8 +1267,8 @@
 
         // Adds product to cart
         function addToCart(p, isBuyNow=false) {
-            if(p.sizes && !selectedSize) return showToast("Please select a size");
-            if(p.colors && !selectedColor) return showToast("Please select a color");
+            if(p.sizes && !selectedSize) return showToast("অনুগ্রহ করে একটি সাইজ সিলেক্ট করুন");
+            if(p.colors && !selectedColor) return showToast("অনুগ্রহ করে একটি কালার সিলেক্ট করুন");
             
             let price = p.discount > 0 ? Math.round(p.price - (p.price*(p.discount/100))) : p.price;
             let item = cart.find(x => x.id === p.id && x.size === selectedSize && x.color === selectedColor);
@@ -1182,14 +1276,51 @@
             else { cart.push({id: p.id, name: p.name, image: p.image, price: price, qty: 1, size: selectedSize, color: selectedColor}); }
             updateCartBadge();
             saveCart();
-            showToast("Added to Cart");
+            showToast("কার্টে যোগ করা হয়েছে");
             if(isBuyNow) { nav('cart'); }
         }
 
         function buyNow() {
-            if(currentProduct.sizes && !selectedSize) return showToast("Please select a size");
-            if(currentProduct.colors && !selectedColor) return showToast("Please select a color");
+            if(currentProduct.sizes && !selectedSize) return showToast("অনুগ্রহ করে একটি সাইজ সিলেক্ট করুন");
+            if(currentProduct.colors && !selectedColor) return showToast("অনুগ্রহ করে একটি কালার সিলেক্ট করুন");
             addToCart(currentProduct, true);
+        }
+
+        // বাংলাদেশ ডাইনামিক লোকেশন ড্রপডাউন হ্যান্ডলার
+        function initLocationListeners() {
+            const regSel = $('#chkRegion');
+            const citySel = $('#chkCity');
+            const zoneSel = $('#chkZone');
+
+            regSel.addEventListener('change', () => {
+                const region = regSel.value;
+                citySel.innerHTML = '<option value="">জেলা নির্বাচন করুন</option>';
+                zoneSel.innerHTML = '<option value="">উপজেলা নির্বাচন করুন</option>';
+                
+                if (region && bdLocations[region]) {
+                    Object.keys(bdLocations[region]).forEach(city => {
+                        const opt = document.createElement('option');
+                        opt.value = city;
+                        opt.textContent = city;
+                        citySel.appendChild(opt);
+                    });
+                }
+            });
+
+            citySel.addEventListener('change', () => {
+                const region = regSel.value;
+                const city = citySel.value;
+                zoneSel.innerHTML = '<option value="">উপজেলা নির্বাচন করুন</option>';
+                
+                if (region && city && bdLocations[region][city]) {
+                    bdLocations[region][city].forEach(zone => {
+                        const opt = document.createElement('option');
+                        opt.value = zone;
+                        opt.textContent = zone;
+                        zoneSel.appendChild(opt);
+                    });
+                }
+            });
         }
 
         function updateCartBadge() {
@@ -1207,7 +1338,7 @@
             let html = '';
             let total = 0;
             if(cart.length === 0) {
-                html = '<div class="text-center p-15" style="padding: 40px 0;"><i class="fa fa-shopping-cart fa-3x text-light mb-10" style="color: var(--white); font-size: 48px;"></i><p style="color: var(--text-light); font-weight:600;">Your cart is empty</p></div>';
+                html = '<div class="text-center p-15" style="padding: 40px 0;"><i class="fa fa-shopping-cart fa-3x text-light mb-10" style="color: var(--white); font-size: 48px;"></i><p style="color: var(--text-light); font-weight:600;">আপনার কার্টটি সম্পূর্ণ খালি</p></div>';
             } else {
                 html = cart.map((c, i) => {
                     total += (c.price * c.qty);
@@ -1216,7 +1347,7 @@
                         <img src="${c.image}">
                         <div style="flex:1">
                             <div class="p-name">${c.name}</div>
-                            <div class="p-price">৳${c.price} ${c.size ? `| Size: ${c.size}` : ''} ${c.color ? `| Color: ${c.color}` : ''}</div>
+                            <div class="p-price">৳${c.price} ${c.size ? `| সাইজ: ${c.size}` : ''} ${c.color ? `| কালার: ${c.color}` : ''}</div>
                             <div class="flex items-center gap-10 mt-10">
                                 <button class="qty-btn" onclick="updateQty(${i}, -1)">-</button>
                                 <span style="font-weight:700; min-width:16px; text-align:center;">${c.qty}</span>
@@ -1239,7 +1370,7 @@
                         <div style="flex:1">
                             <div class="p-name">${c.name}</div>
                             <div class="p-price">৳${c.price}</div>
-                            <button class="btn-primary mt-10" style="padding:8px 16px; font-size:12px; border-radius:12px;" onclick="moveToCart(${i})">Move to Cart</button>
+                            <button class="btn-primary mt-10" style="padding:8px 16px; font-size:12px; border-radius:12px;" onclick="moveToCart(${i})">কার্টে নিয়ে যান</button>
                         </div>
                     </div>
                 `).join('');
@@ -1259,25 +1390,40 @@
         function toggleWishlist(id) {
             if(wishlist.includes(id)) {
                 db.ref(`wishlist/${currentUser.uid}/${id}`).remove();
-                showToast("Removed from Wishlist");
+                showToast("উইশলিস্ট থেকে সরানো হয়েছে");
             } else {
                 db.ref(`wishlist/${currentUser.uid}/${id}`).set(true);
-                showToast("Added to Wishlist");
+                showToast("উইশলিস্টে যোগ করা হয়েছে");
             }
             renderHomeProducts();
         }
 
         // Checkout Setup
         function goToCheckout() {
-            if(cart.length === 0) return showToast("Cart is empty");
+            if(cart.length === 0) return showToast("কার্ট সম্পূর্ণ খালি");
             
             // Prefill info if available
             db.ref(`addresses/${currentUser.uid}`).once('value', s => {
                 if(s.exists()){
                     let ad = s.val();
                     $('#chkName').value = ad.name||''; $('#chkPhone').value = ad.phone||'';
-                    $('#chkRegion').value = ad.region||''; $('#chkCity').value = ad.city||'';
-                    $('#chkZone').value = ad.zone||''; $('#chkAddress').value = ad.address||'';
+                    $('#chkAddress').value = ad.address||'';
+                    $('#chkLandmark').value = ad.landmark||'';
+                    $('#chkLabel').value = ad.label||'Home';
+
+                    if (ad.region) {
+                        $('#chkRegion').value = ad.region;
+                        $('#chkRegion').dispatchEvent(new Event('change'));
+                        
+                        if (ad.city) {
+                            $('#chkCity').value = ad.city;
+                            $('#chkCity').dispatchEvent(new Event('change'));
+                            
+                            if (ad.zone) {
+                                $('#chkZone').value = ad.zone;
+                            }
+                        }
+                    }
                 }
             });
             
@@ -1286,7 +1432,7 @@
             $('#chkItems').innerHTML = cart.map(c => `
                 <div class="summary-row">
                     <span>${c.name} <span style="color: var(--text-light); font-size:12px; font-weight:600;">(x${c.qty})</span></span>
-                    <strong>৳${(c.price*c.qty).toLocaleString()}</strong>
+                    <strong>৳ ${(c.price*c.qty).toLocaleString()}</strong>
                 </div>
             `).join('');
             $('#chkSub').innerText = formatPrice(sub);
@@ -1303,7 +1449,7 @@
                 zone: $('#chkZone').value, address: $('#chkAddress').value,
                 landmark: $('#chkLandmark').value, label: $('#chkLabel').value
             };
-            if(!address.name || !address.phone || !address.region || !address.address) return showToast("Fill required address fields");
+            if(!address.name || !address.phone || !address.region || !address.city || !address.zone || !address.address) return showToast("প্রয়োজনীয় ঠিকানার সবকটি ঘর পূরণ করুন");
             
             let payMethod = "Cash on Delivery";
             let payTrx = "N/A";
@@ -1331,7 +1477,7 @@
                 if($('#chkDefShip').checked) db.ref(`addresses/${currentUser.uid}`).set(address);
 
                 cart =[]; saveCart();
-                showToast("Order Placed Successfully!");
+                showToast("অর্ডারটি সফলভাবে সম্পন্ন হয়েছে!");
                 nav('orders');
             });
         }
@@ -1348,30 +1494,36 @@
                         let canCancel = timeDiff < sixHoursInMs && o.status === 'Pending';
                         
                         let cancelBtn = canCancel 
-                            ? `<button class="btn-primary" style="background:#ff4d4f; padding: 8px 16px; width:auto; font-size:12px; border-radius:12px; margin-top:12px; box-shadow:none; border:none;" onclick="cancelOrder('${o.id}')"><i class="fa fa-times-circle"></i> Cancel Order</button>` 
+                            ? `<button class="btn-primary" style="background:#ff4d4f; padding: 8px 16px; width:auto; font-size:12px; border-radius:12px; margin-top:12px; box-shadow:none; border:none;" onclick="cancelOrder('${o.id}')"><i class="fa fa-times-circle"></i> অর্ডার বাতিল করুন</button>` 
                             : '';
+
+                        let displayStatus = o.status;
+                        if(o.status === 'Pending') displayStatus = 'অপেক্ষমাণ';
+                        else if(o.status === 'Cancelled') displayStatus = 'বাতিলকৃত';
+                        else if(o.status === 'Shipped') displayStatus = 'পাঠানো হয়েছে';
+                        else if(o.status === 'Delivered') displayStatus = 'ডেলিভারি সম্পন্ন';
 
                         return `
                             <div class="card mt-10">
                                 <div class="flex justify-between" style="margin-bottom:8px;">
                                     <strong>${o.id}</strong> 
-                                    <span style="color:${o.status === 'Cancelled' ? '#94a3b8' : 'var(--accent)'}; font-weight:800; text-shadow: var(--neon-shadow);">${o.status}</span>
+                                    <span style="color:${o.status === 'Cancelled' ? '#94a3b8' : 'var(--accent)'}; font-weight:800; text-shadow: var(--neon-shadow);">${displayStatus}</span>
                                 </div>
-                                <p class="text-sm text-light" style="font-size:12px; margin-bottom:8px; color: var(--text-light); font-weight:500;">Date: ${new Date(o.date).toLocaleDateString()} ${new Date(o.date).toLocaleTimeString()}</p>
-                                <p style="font-size:14px;"><strong>Total:</strong> <span style="color: var(--accent); font-weight:800; text-shadow: var(--neon-shadow);">৳${o.total}</span></p>
+                                <p class="text-sm text-light" style="font-size:12px; margin-bottom:8px; color: var(--text-light); font-weight:500;">তারিখ: ${new Date(o.date).toLocaleDateString()} ${new Date(o.date).toLocaleTimeString()}</p>
+                                <p style="font-size:14px;"><strong>সর্বমোট:</strong> <span style="color: var(--accent); font-weight:800; text-shadow: var(--neon-shadow);">৳ ${o.total}</span></p>
                                 ${cancelBtn}
                             </div>
                         `;
                     }).join('');
                     $('#myOrdersList').innerHTML = html;
                 } else {
-                    $('#myOrdersList').innerHTML = '<p style="text-align:center; color: var(--text-light); padding: 20px;">No orders found.</p>';
+                    $('#myOrdersList').innerHTML = '<p style="text-align:center; color: var(--text-light); padding: 20px;">কোনো অর্ডার পাওয়া যায়নি।</p>';
                 }
             });
         }
 
         function cancelOrder(orderId) {
-            if (confirm("Are you sure you want to cancel this order?")) {
+            if (confirm("আপনি কি নিশ্চিত যে এই অর্ডারটি বাতিল করতে চান?")) {
                 db.ref(`orders/${orderId}`).once('value', s => {
                     if (s.exists()) {
                         let o = s.val();
@@ -1380,13 +1532,13 @@
                         let sixHoursInMs = 6 * 60 * 60 * 1000;
                         
                         if (timeDiff > sixHoursInMs) {
-                            showToast("Time limit expired. You can only cancel within 6 hours.");
+                            showToast("বাতিল করার সময়সীমা পার হয়ে গেছে। আপনি শুধু ৬ ঘণ্টার মধ্যে বাতিল করতে পারবেন।");
                             loadOrders();
                             return;
                         }
                         
                         if (o.status !== 'Pending') {
-                            showToast(`Cannot cancel order. Status is already ${o.status}.`);
+                            showToast(`অর্ডার বাতিল করা সম্ভব নয়। স্ট্যাটাস ইতোমধ্যে ${o.status}`);
                             loadOrders();
                             return;
                         }
@@ -1406,7 +1558,7 @@
                                     });
                                 });
                             }
-                            showToast("Order Cancelled Successfully");
+                            showToast("অর্ডারটি সফলভাবে বাতিল করা হয়েছে");
                             loadOrders();
                         });
                     }
@@ -1416,28 +1568,28 @@
 
         function renderWishlist() {
             let wProds = products.filter(p => wishlist.includes(p.id));
-            $('#myWishlistList').innerHTML = wProds.length ? wProds.map(generateCard).join('') : '<p style="grid-column: span 2; text-align: center; color: var(--text-light); padding: 20px;">Wishlist is empty</p>';
+            $('#myWishlistList').innerHTML = wProds.length ? wProds.map(generateCard).join('') : '<p style="grid-column: span 2; text-align: center; color: var(--text-light); padding: 20px;">উইশলিস্ট খালি</p>';
         }
 
         function submitFeedback() {
             let msg = $('#feedMsg').value;
-            if(!msg) return showToast("Enter message");
+            if(!msg) return showToast("দয়া করে বার্তাটি লিখুন");
             db.ref(`feedback`).push({
                 uid: currentUser.uid, 
                 name: $('#accName').innerText,
                 email: currentUser.email, 
                 msg: msg, 
                 date: new Date().toISOString()
-            }).then(() => { showToast("Feedback submitted"); $('#feedMsg').value = ''; nav('account'); });
+            }).then(() => { showToast("আপনার মতামত জমা দেওয়া হয়েছে"); $('#feedMsg').value = ''; nav('account'); });
         }
 
         function chatWithUs() {
             if(settings.phone) { window.location.href = `https://wa.me/${settings.phone}`; }
-            else { alert("Support chat unavailable currently."); }
+            else { alert("সাপোর্ট চ্যাট এই মুহূর্তে উপলব্ধ নেই।"); }
         }
 
         function loadHelp() {
-            $('#policyContent').innerHTML = settings.policies || '<p>No policies available.</p>';
+            $('#policyContent').innerHTML = settings.policies || '<p>কোনো নীতিমালা পাওয়া যায়নি।</p>';
         }
 
         // Init App Data load
